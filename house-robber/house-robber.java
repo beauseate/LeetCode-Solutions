@@ -6,7 +6,6 @@ class Solution {
         int max = 0;
         for(int pointer: nums){
             max = Math.max(firstRob + pointer, secondRob);
-            int tmp = firstRob;
             firstRob = secondRob;
             secondRob = max;
         }
