@@ -4,7 +4,7 @@ class Solution {
         int start = 0;
         int end = nums.length;
         
-        while(start < end){
+        while(start != end){
             if(nums[start] < target){
                 start++;
             }
