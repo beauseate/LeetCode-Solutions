@@ -1,13 +1,14 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         
-        d = {}
+        numDict = {}
         
         for i, num in enumerate(nums):
             difference = target - num
             
-            if difference in d:
-                return {i, d.get(difference)}
-            d[num] = i
-        return {0, 0}
+            if difference in numDict:
+                return{i, numDict.get(difference)}
+            numDict[num] = i
+        
+        return{0, 0}
         
