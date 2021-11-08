@@ -14,13 +14,18 @@ class Solution:
         
         queue = collections.deque()
         queue.append(root)
+        
         while queue:
             level = []
+            
             for i in range(0, len(queue)):
                 node = queue.popleft()
                 level.append(node.val)
-                if node.left: queue.append(node.left)
-                if node.right: queue.append(node.right)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
             result.append(level)
-        
+            
         return result
+        
