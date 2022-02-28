@@ -3,10 +3,12 @@ class Solution:
         
         numsDict = {}
         
-        for i in range(0, len(nums)):
-            difference = target - nums[i]
+        for i, num in enumerate(nums):
+            difference = target - num
+            
             if difference in numsDict:
-                return {i, numsDict.get(difference)}
-            numsDict[nums[i]] = i
+                return {i, numsDict[difference]}
+            numsDict[num] = i
+            
         return {-1, -1}
             
